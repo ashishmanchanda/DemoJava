@@ -3,6 +3,7 @@ public class Problem2 {
     static int maxDiff = Integer.MAX_VALUE;
 
     static int sqrt(int num, int mid,int prevMid) {
+        System.out.println("left");
         if (mid <= 1 || mid >= num) {
             return result;
         }

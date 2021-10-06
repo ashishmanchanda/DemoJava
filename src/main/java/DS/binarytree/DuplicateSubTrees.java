@@ -24,9 +24,12 @@ import java.util.HashMap;
             return "";
 
         String str = "(";
+        System.out.println("/");
         str += inorder(node.left);
+        System.out.println("|");
         str += Integer.toString(node.data);
         str += inorder(node.right);
+        System.out.println("\\");
         str += ")";
 
         // Subtree already present (Note that we use
