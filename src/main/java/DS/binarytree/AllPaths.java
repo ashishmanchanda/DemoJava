@@ -7,7 +7,7 @@ and a pointer to right child */
 class Node
 {
     int data;
-    Node left, right;
+    ProblemNode left, right;
 
     Node(int item)
     {
@@ -18,12 +18,12 @@ class Node
 
 class BinaryTree
 {
-    Node root;
+    ProblemNode root;
 
     /*Given a binary tree, print out all of its root-to-leaf
     paths, one per line. Uses a recursive helper to do
     the work.*/
-    void printPaths(Node node)
+    void printPaths(ProblemNode node)
     {
         int path[] = new int[1000];
         printPathsRecur(node, path, 0);
@@ -32,7 +32,7 @@ class BinaryTree
     /* Recursive helper function -- given a node, and an array
     containing the path from the root node up to but not
     including this node, print out all the root-leaf paths.*/
-    void printPathsRecur(Node node, int path[], int pathLen)
+    void printPathsRecur(ProblemNode node, int path[], int pathLen)
     {
         if (node == null)
             return;
@@ -67,12 +67,12 @@ class BinaryTree
     public static void main(String args[])
     {
         BinaryTree tree = new BinaryTree();
-        tree.root = new Node(10);
-        tree.root.left = new Node(8);
-        tree.root.right = new Node(2);
-        tree.root.left.left = new Node(3);
-        tree.root.left.right = new Node(5);
-        tree.root.right.left = new Node(2);
+        tree.root = new ProblemNode(10);
+        tree.root.left = new ProblemNode(8);
+        tree.root.right = new ProblemNode(2);
+        tree.root.left.left = new ProblemNode(3);
+        tree.root.left.right = new ProblemNode(5);
+        tree.root.right.left = new ProblemNode(2);
 
         /* Let us test the built tree by printing Insorder traversal */
         tree.printPaths(tree.root);

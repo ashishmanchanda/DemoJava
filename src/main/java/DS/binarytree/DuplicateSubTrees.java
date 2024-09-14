@@ -1,72 +1,82 @@
 package DS.binarytree;
 
-// A java program to find all duplicate subtrees
-// in a binary tree.
-import java.util.HashMap;
- class Duplicate_subtress {
 
-    /* A binary tree node has data, pointer to
-    left child and a pointer to right child */
-    static HashMap<String, Integer> m;
-    static class Node {
-        int data;
-        Node left;
-        Node right;
-        Node(int data){
-            this.data = data;
-            left = null;
-            right = null;
-        }
-    }
-    static String inorder(Node node)
+// Java program to find if there is a duplicate
+// sub-tree of size 2 or more.
+import java.util.HashSet;
+ class Main111 {
+
+    static char MARKER = '$';
+
+    // This function returns empty string if tree
+    // contains a duplicate subtree of size 2 or more.
+    public static String dupSubUtil(NodeDuplicate root, HashSet<String> subtrees)
     {
-        if (node == null)
+        String s = "";
+
+        // If current NodeDuplicate is NULL, return marker
+        if (root == null)
+            return s + MARKER;
+
+        // If left subtree has a duplicate subtree.
+        String lStr = dupSubUtil(root.left,subtrees);
+        if (lStr.equals(s))
+            return s;
+
+        // Do same for right subtree
+        String rStr = dupSubUtil(root.right,subtrees);
+        if (rStr.equals(s))
+            return s;
+
+        // Serialize current subtree
+        s = s + root.data + lStr + rStr;
+
+        // If current subtree already exists in hash
+        // table. [Note that size of a serialized tree
+        // with single NodeDuplicate is 3 as it has two marker
+        // NodeDuplicates.
+        if (s.length() > 3 && subtrees.contains(s))
             return "";
 
-        String str = "(";
-        System.out.println("/");
-        str += inorder(node.left);
-        System.out.println("|");
-        str += Integer.toString(node.data);
-        str += inorder(node.right);
-        System.out.println("\\");
-        str += ")";
-
-        // Subtree already present (Note that we use
-        // HashMap instead of HashSet
-        // because we want to print multiple duplicates
-        // only once, consider example of 4 in above
-        // subtree, it should be printed only once.
-        if (m.get(str) != null && m.get(str)==1 )
-            System.out.print( node.data + " ");
-
-        if (m.containsKey(str))
-            m.put(str, m.get(str) + 1);
-        else
-            m.put(str, 1);
-
-
-        return str;
+        subtrees.add(s);
+        return s;
     }
 
-    // Wrapper over inorder()
-    static void printAllDups(Node root)
+    //Function to find if the Binary Tree contains duplicate
+    //subtrees of size 2 or more
+    public static String dupSub(NodeDuplicate root)
     {
-        m = new HashMap<>();
-        inorder(root);
+        HashSet<String> subtrees=new HashSet<>();
+        return dupSubUtil(root,subtrees);
     }
-    // Driver code
+
     public static void main(String args[])
     {
-        Node root = null;
-        root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.right.left = new Node(2);
-        root.right.left.left = new Node(4);
-        root.right.right = new Node(4);
-        printAllDups(root);
+        NodeDuplicate root = new NodeDuplicate('A');
+        root.left = new NodeDuplicate('B');
+        root.right = new NodeDuplicate('C');
+        root.left.left = new NodeDuplicate('D');
+        root.left.right = new NodeDuplicate('E');
+        root.right.right = new NodeDuplicate('B');
+        root.right.right.right = new NodeDuplicate('E');
+        root.right.right.left= new NodeDuplicate('D');
+        String str = dupSub(root);
+        if(str.equals(""))
+            System.out.print(" Yes ");
+        else
+            System.out.print(" No ");
     }
 }
-// This code is contributed by Sumit Ghosh
+
+// A binary tree NodeDuplicate has data,
+// pointer to left child
+// and a pointer to right child
+class NodeDuplicate {
+    int data;
+    NodeDuplicate left,right;
+    NodeDuplicate(int data)
+    {
+        this.data=data;
+    }
+};
+//This code is contributed by Gaurav Tiwari

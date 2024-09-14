@@ -5,8 +5,9 @@ package DS.binarytree;
 import java.util.TreeMap;
 import java.util.Map.Entry;
 import java.util.Vector;
+import java.util.regex.Pattern;
 
- class DiagonalTraversalBTree
+class DiagonalTraversalBTree
 {
     // Tree node
     static class Node
@@ -88,22 +89,27 @@ import java.util.Vector;
         }
     }
 
-    // Driver program
-    public static void main(String[] args)
-    {
+//    // Driver program
+//    public static void main(String[] args)
+//    {
+//
+//        Node root = new Node(8);
+//        root.left = new Node(3);
+//        root.right = new Node(10);
+//        root.left.left = new Node(1);
+//        root.left.right = new Node(6);
+//        root.right.right = new Node(14);
+//        root.right.right.left = new Node(13);
+//        root.left.right.left = new Node(4);
+//        root.left.right.right = new Node(7);
+//
+//        diagonalPrint(root);
+//    }
+public static void main(String[] args) {
+    if (!Pattern.compile("^(git|ssh|http(s)?)(:(\\/\\/)?)([\\w\\.@\\:\\/\\-~]+)\\/([a-zA-Z0-9_\\-~]+)\\/([a-zA-Z0-9_\\-]+)\\.git$").matcher("ssh://git@bitbucket.oci.oraclecorp.com:7999/dlcbld/dlc-build-service-config.git").matches()) {
+        System.out.println("true");
+    }}
 
-        Node root = new Node(8);
-        root.left = new Node(3);
-        root.right = new Node(10);
-        root.left.left = new Node(1);
-        root.left.right = new Node(6);
-        root.right.right = new Node(14);
-        root.right.right.left = new Node(13);
-        root.left.right.left = new Node(4);
-        root.left.right.right = new Node(7);
-
-        diagonalPrint(root);
-    }
 }
 // This code is contributed by Sumit Ghosh
 
