@@ -2,7 +2,6 @@ package algo.DP;
 
 // Java program to find nth ugly number
 import java.lang.Math;
-
 class UglyNumber
 {
     /* Function to get the nth ugly number*/
