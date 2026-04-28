@@ -2,7 +2,7 @@ package striversheet.stackandqueues;
 
 import java.util.Stack;
 
- class Solution {
+ class BalancedParanthesos {
     // Function to check if the input string has valid parentheses
     public boolean isValid(String s) {
         Stack<Character> st = new Stack<>();  // Stack to store opening brackets
@@ -27,7 +27,7 @@ import java.util.Stack;
     }
 
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        BalancedParanthesos sol = new BalancedParanthesos();
         String s = "()[{}()]";
 
         if (sol.isValid(s))
