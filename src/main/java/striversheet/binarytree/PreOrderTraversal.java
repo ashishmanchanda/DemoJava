@@ -17,7 +17,7 @@ class Node {
 }
 
 // Solution class to perform preorder traversal
-class Solution {
+class MaxPathSolution {
 
     // Function to perform preorder traversal
     // of the tree and store values in 'arr'
@@ -64,7 +64,7 @@ class Main {
         root.left.right = new MaximumDepthNode(5);
 
         // Getting preorder traversal
-        Solution sol = new Solution();
+        MaxPathSolution sol = new MaxPathSolution();
         java.util.List<Integer> result = sol.preOrder(root);
 
         // Displaying the preorder traversal result

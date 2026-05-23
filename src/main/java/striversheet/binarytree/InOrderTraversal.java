@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 // TreeNode structure for the binary tree
-class TreeNode {
+class MaxPathSumTreeNodes {
     int data;
-    TreeNode left;
-    TreeNode right;
+    MaxPathSumTreeNodes left;
+    MaxPathSumTreeNodes right;
 
     // Constructor to initialize the TreeNode with a value
-    TreeNode(int val) {
+    MaxPathSumTreeNodes(int val) {
         data = val;
         left = null;
         right = null;
@@ -18,7 +18,7 @@ class TreeNode {
 }
 
 class InOrderTraversal {
-    private void recursiveInorder(TreeNode root, List<Integer> arr) {
+    private void recursiveInorder(MaxPathSumTreeNodes root, List<Integer> arr) {
         if (root == null) {
             return;
         }
@@ -28,7 +28,7 @@ class InOrderTraversal {
     }
 
     // Function to initiate inorder traversal and return the resulting list
-    public List<Integer> inorder(TreeNode root) {
+    public List<Integer> inorder(MaxPathSumTreeNodes root) {
         List<Integer> arr = new ArrayList<>();
         recursiveInorder(root, arr);
         return arr;
@@ -38,11 +38,11 @@ class InOrderTraversal {
 class InorderTraversal {
     public static void main(String[] args) {
         // Creating a sample binary tree
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        MaxPathSumTreeNodes root = new MaxPathSumTreeNodes(1);
+        root.left = new MaxPathSumTreeNodes(2);
+        root.right = new MaxPathSumTreeNodes(3);
+        root.left.left = new MaxPathSumTreeNodes(4);
+        root.left.right = new MaxPathSumTreeNodes(5);
 
         InOrderTraversal sol = new InOrderTraversal();
         List<Integer> result = sol.inorder(root);
