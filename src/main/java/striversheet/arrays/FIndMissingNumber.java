@@ -2,7 +2,7 @@ package striversheet.arrays;
 
 import java.util.*;
 
- class FindMissingNumber {
+class FIndMissingNumber {
     public static int missingNum(int[] arr) {
         long n = arr.length + 1;
 
