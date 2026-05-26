@@ -1,4 +1,4 @@
-package algo.DP.fractionalknapsack;
+package striversheet.DP.fractionalknapsack;
 
 class CoinChange {
     public int countChange(int[] denominations, int total) {

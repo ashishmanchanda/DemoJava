@@ -1,4 +1,4 @@
-package algo.DP.fractionalknapsack;
+package striversheet.DP.fractionalknapsack;
 
 class Knapsack1 {
     public int solveKnapsack(int[] profits, int[] weights, int capacity) {
