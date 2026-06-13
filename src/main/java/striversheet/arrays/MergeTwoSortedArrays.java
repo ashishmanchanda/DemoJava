@@ -1,4 +1,4 @@
-package striversheet.arraygfg;
+package striversheet.arrays;
 
 class MergeTwoSortedGfG {
     static void mergeArrays(int[] arr1, int[] arr2) {

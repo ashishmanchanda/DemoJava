@@ -1,5 +1,5 @@
-package designpattern.observerdesignpattern.observable;
-import designpattern.observerdesignpattern.observer.NotificationAlertObserver;
+package designpatternpracticeshrayansh.observerdesignpattern.observable;
+import designpatternpracticeshrayansh.observerdesignpattern.observer.NotificationAlertObserver;
 
 import java.util.ArrayList;
 import java.util.List;

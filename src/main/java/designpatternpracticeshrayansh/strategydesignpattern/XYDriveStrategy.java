@@ -1,4 +1,4 @@
-package designpattern.strategydesignpattern;
+package designpatternpracticeshrayansh.strategydesignpattern;
 
 class XyDriveStrategy implements DriveStrategy {
     @Override

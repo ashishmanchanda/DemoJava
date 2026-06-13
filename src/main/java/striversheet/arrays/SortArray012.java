@@ -1,6 +1,4 @@
-package striversheet.arraygfg;
-
-import java.util.*;
+package striversheet.arrays;
 
 class SortArray012GfG {
     static void sort012(int[] arr) {

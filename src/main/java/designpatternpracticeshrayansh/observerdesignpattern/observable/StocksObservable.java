@@ -1,6 +1,6 @@
-package designpattern.observerdesignpattern.observable;
+package designpatternpracticeshrayansh.observerdesignpattern.observable;
 
-import designpattern.observerdesignpattern.observer.NotificationAlertObserver;
+import designpatternpracticeshrayansh.observerdesignpattern.observer.NotificationAlertObserver;
 
 public interface StocksObservable {
     public void add(NotificationAlertObserver observer);

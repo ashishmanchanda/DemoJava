@@ -1,4 +1,4 @@
-package striversheet.arraygfg;
+package striversheet.arrays;
 
 import java.util.PriorityQueue;
 

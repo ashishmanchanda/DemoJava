@@ -1,4 +1,4 @@
-package designpattern.factorydesignpattern;
+package designpatternpracticeshrayansh.factorydesignpattern;
 
 public class ShapeFactory {
     Shape getShape (String input) {

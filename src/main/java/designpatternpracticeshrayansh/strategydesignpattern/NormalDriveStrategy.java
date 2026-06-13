@@ -1,4 +1,4 @@
-package designpattern.strategydesignpattern;
+package designpatternpracticeshrayansh.strategydesignpattern;
 
 class NormalDriveStrategy implements DriveStrategy {
     @Override

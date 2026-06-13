@@ -1,6 +1,4 @@
-package striversheet.arraygfg;
-
-import java.util.Arrays;
+package striversheet.arrays;
 
 class LargestSumContiguousGfG {
 

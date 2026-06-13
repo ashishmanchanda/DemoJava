@@ -1,4 +1,4 @@
-package designpattern.strategydesignpattern;
+package designpatternpracticeshrayansh.strategydesignpattern;
 
 class OffRoadVehicle extends Vehicle{
     OffRoadVehicle() {super(new NormalDriveStrategy());}

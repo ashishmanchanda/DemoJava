@@ -1,6 +1,4 @@
-package striversheet.arraygfg;
-
-import java.util.*;
+package striversheet.arrays;
 
 class COuntINversionGfG {
 

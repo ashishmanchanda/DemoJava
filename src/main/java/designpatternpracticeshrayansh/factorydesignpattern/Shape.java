@@ -1,4 +1,4 @@
-package designpattern.factorydesignpattern;
+package designpatternpracticeshrayansh.factorydesignpattern;
 
 public interface Shape{
     public void draw ();

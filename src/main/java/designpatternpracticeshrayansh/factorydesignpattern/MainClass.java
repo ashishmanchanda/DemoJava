@@ -1,4 +1,4 @@
-package designpattern.factorydesignpattern;
+package designpatternpracticeshrayansh.factorydesignpattern;
 
 public class MainClass {
     public static void main(String args []) {
